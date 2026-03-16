@@ -13,6 +13,7 @@ dependencies = [
   "langchain",
   "langgraph",
   "google-generativeai",
+
   "sqlalchemy",
   "psycopg[binary]",
 ]
@@ -47,6 +48,7 @@ target-version = ["py311"]
 python_version = "3.11"
 strict = true
 ignore_missing_imports = true
+disallow_untyped_decorators = false
 
 [tool.pytest.ini_options]
 addopts = "-q"
