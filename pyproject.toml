@@ -36,7 +36,7 @@ build-backend = "setuptools.build_meta"
 packages = ["app"]
 
 [tool.uv]
-dependency-groups = { dev = ["gradepilot[dev]"] }
+dependency-groups = { dev = ["ruff", "black", "mypy", "pytest", "pytest-asyncio", "pytest-mock", "pytest-cov"] }
 
 [tool.ruff]
 line-length = 88
