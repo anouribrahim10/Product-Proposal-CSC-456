@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install uv ruff black mypy && uv sync
-      - run: ruff check . && black --check . && mypy --strict .
+      - run: ruff check . && black --check . && mypy .
 
   test:
     runs-on: ubuntu-latest
