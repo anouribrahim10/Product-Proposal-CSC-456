@@ -4,7 +4,6 @@ from fastapi.testclient import TestClient
 
 from app.main import app
 
-
 client = TestClient(app)
 
 
@@ -18,4 +17,3 @@ def test_root_ok() -> None:
     response = client.get("/")
     assert response.status_code == HTTPStatus.OK
     assert response.json() == {"message": "GradePilot API"}
-
