@@ -6,7 +6,7 @@ from app.utils import extract_deadline
 app = FastAPI(title="GradePilot API")
 
 
-class ExtractRequest(BaseModel):
+class ExtractRequest(BaseModel):  # type: ignore
     text: str
 
 
