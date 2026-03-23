@@ -5,18 +5,22 @@ from app.utils import extract_deadline
 
 app = FastAPI(title="GradePilot API")
 
+
 class ExtractRequest(BaseModel):
     text: str
+
 
 @app.get("/health", tags=["system"])
 async def health() -> Dict[str, str]:
     """Simple health check endpoint used by tests and monitoring."""
     return {"status": "ok"}
 
+
 @app.get("/", tags=["system"])
 async def root() -> Dict[str, str]:
     """Placeholder root endpoint."""
     return {"message": "GradePilot API"}
+
 
 @app.post("/extract", tags=["system"])
 async def extract(request: ExtractRequest) -> Dict[str, str]:
