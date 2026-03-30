@@ -1,19 +1,20 @@
 import React from "react";
 import UploadHub from "./UploadHub";
+import { Bot } from "lucide-react";
 
 export default function LeftSidebar() {
   return (
     <aside className="h-full w-[300px] bg-[#141B3A]/60 backdrop-blur-xl border border-white/5 p-6 flex flex-col rounded-[24px] shadow-[0_10px_40px_rgba(0,0,0,0.4)] relative">
       {/* Brand Header */}
-      <div className="flex items-center gap-4 mb-8 pl-1">
-        <div className="w-[42px] h-[42px] flex-shrink-0 rounded-2xl bg-gradient-to-br from-[#62bbf0] to-[#59e3d3] flex items-center justify-center shadow-[0_4px_16px_rgba(98,187,240,0.3)]">
-          <svg className="w-[22px] h-[22px] text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+      <div className="flex items-center gap-3 mb-8 pl-1">
+        <div className="flex items-center justify-center w-10 h-10 rounded-xl shadow-lg shadow-[#00F5D4]/20" style={{ background: 'linear-gradient(135deg, #6D4AFF, #00F5D4)' }}>
+          <Bot className="text-white w-6 h-6" />
         </div>
         <div>
-          <h1 className="text-white font-extrabold text-xl tracking-wide leading-tight mt-0.5">GradePilot</h1>
-          <p className="text-[#36d3b7] text-[10px] tracking-wide font-bold mt-1">Autonomous Agent</p>
+          <h1 className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-[#94A3B8]">
+            GradePilot
+          </h1>
+          <p className="text-[10px] text-[#00F5D4] font-bold drop-shadow-[0_0_8px_rgba(0,245,212,0.5)] mt-1">Autonomous Agent</p>
         </div>
       </div>
 
